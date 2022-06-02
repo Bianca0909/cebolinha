@@ -10,6 +10,7 @@ public class App {
     	System.out.println(farmaceutico.getNome());
     	System.out.println(farmaceutico.getOfertaDia());
     	System.out.println(farmaceutico.getDocumento());
+    	System.out.println(farmaceutico.gerarCpf());
     	
     	Fornecedor fornecedor = new Fornecedor();
     	System.out.println(fornecedor.getNome());
