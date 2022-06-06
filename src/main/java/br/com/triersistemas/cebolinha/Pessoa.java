@@ -1,12 +1,15 @@
 package br.com.triersistemas.cebolinha;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.SplittableRandom;
 
-public class Pessoa {
+public abstract class Pessoa {
 	private String nome;
-	private String documento;
+	private LocalDate niver;
 
 	public Pessoa() {
 		List<String> nomes = new ArrayList<>();
@@ -24,13 +27,20 @@ public class Pessoa {
 
 		SplittableRandom r = new SplittableRandom();
 		this.nome = nomes.get(r.nextInt(0, nomes.size()));
+		this.niver = LocalDate.now();
+	}
+
+	protected Pessoa(final String nome, final LocalDate niver) {
+		this.nome = nome;
+		this.niver = niver;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public String getDocumento() {
-		return documento;
+	public Long getIdade() {
+		return Objects.nonNull(niver) ? ChronoUnit.YEARS.between(niver, LocalDate.now()) : 0;
 	}
+
 }
