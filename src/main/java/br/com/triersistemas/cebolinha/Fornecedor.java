@@ -1,12 +1,9 @@
 package br.com.triersistemas.cebolinha;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
-import java.util.SplittableRandom;
 
-public class Fornecedor extends PessoaJuridica {
+public class Fornecedor extends PessoaJuridica{
 	private List<String> produtos;
 
 	public List<String> getProdutos() {

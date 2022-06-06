@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.SplittableRandom;
 
-public abstract class Pessoa {
+public class Pessoa {
 	private String nome;
 	private String documento;
 
@@ -26,13 +26,11 @@ public abstract class Pessoa {
 		this.nome = nomes.get(r.nextInt(0, nomes.size()));
 	}
 
+	public String getNome() {
+		return nome;
+	}
+
 	public String getDocumento() {
 		return documento;
 	}
-
-	public String getNome() {
-		return nome;
-
-	}
-
 }

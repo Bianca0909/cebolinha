@@ -19,5 +19,4 @@ public class Farmaceutico extends PessoaFisica {
 		SplittableRandom r = new SplittableRandom();
 		this.ofertaDia = ofertas.get(r.nextInt(0, ofertas.size()));
 	}
-
 }
